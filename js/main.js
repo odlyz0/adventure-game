@@ -54,19 +54,16 @@ gameWindow.onclick= function(e){
                 if (gameState.door2locked == true){
                     if(document.getElementById("inv-Key") !== null){
         //yes == unlock door
-        gameState.door2locked = false
+        gameState.door2locked = false;}
         console.log("door unlocked");
            //check if we have key
-         else {
-        //no ==  alert "Door Locked"
-            alert("Door is locked!");
-          }         } else { 
+             } else { 
             console.log ('enter the buidling');
         }
     
 
           break;
-          
+
         default:
         //explode
         mainCharacter.style.backgroundColor ="#rgb(162, 207, 0);"
