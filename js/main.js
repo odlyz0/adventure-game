@@ -3,23 +3,70 @@ document.getElementById("mainTitle").innerText = "Point and Click adventure game
 //game window reference 
 const gameWindow = document.getElementById("gameWindow");
 
+// Game state
+gameState = {
+    "door2locked" : true
+}
+
+
+
 //Main character 
 const mainCharacter = document.getElementById("maincharacter");
 const offsetCharacter = 16
 const door1 = document.getElementById("door1")
 const sign = document.getElementById("sign")
+//inventory
+const inventoryBox = document.getElementById("inventoryBox");//div
+const inventoryList = document.getElementById("inventoryList");//ul
+
+
+
+
+
+
+
+
 
 gameWindow.onclick= function(e){
     var rect = gameWindow.getBoundingClientRect();
     var x = e.clientX - rect.left;
     var y= e.clientY - rect.top;
- 
+
     switch(e.target.id){
+       
         case "door1":
            mainCharacter.style.backgroundColor ="#FFF00"
-        e.target.style.opacity= 0.4;
-        break;
+            e.target.style.opacity= 0.4;
+        
+            if(document.getElementById("key1") !== null){
+            console.log("found key")
+            document.getElementById("key1").remove();
+            const keyElement = document.createElement("li");
+            keyElement.id = "inv-Key"
+            keyElement.innerText = "Key"
+            inventoryList.appendChild(keyElement)
+            }
 
+          break;
+            
+
+          case "door2":
+                if (gameState.door2locked == true){
+                    if(document.getElementById("inv-Key") !== null){
+        //yes == unlock door
+        gameState.door2locked = false
+        console.log("door unlocked");
+           //check if we have key
+         else {
+        //no ==  alert "Door Locked"
+            alert("Door is locked!");
+          }         } else { 
+            console.log ('enter the buidling');
+        }
+    
+
+          break;
+          
         default:
         //explode
         mainCharacter.style.backgroundColor ="#rgb(162, 207, 0);"
