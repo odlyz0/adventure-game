@@ -1,4 +1,4 @@
-document.getElementById("mainTitle").innerText = "Point and Click adventure game";
+document.getElementById("mainTitle").innerText = "ESCAPE!";
 
 //Game window reference
 const gameWindow = document.getElementById("gameWindow");
@@ -78,11 +78,11 @@ gameWindow.onclick = function (e) {
             break;
 
         case "statue":
-            showMessage(mainCharacterSpeech, mcAudio, "Wow cool statue..");
+            showMessage(mainCharacterSpeech, mcAudio, "Wow a skull i wonder who it was..");
             setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I can talk you know..dummy");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "You don't have to be so mean.");
-            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "You should check the north house..");
+            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I'm alive ya know!");
+            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "WHAT?! how am i supposed to know, a skull usually means your dead.");
+            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "What ever. if you want to escape check the chest in the other room..");
             setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
             break;
 

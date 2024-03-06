@@ -6,13 +6,9 @@ body {
     margin: 0px;
     background-color: #000000;
     font-family: "Kode Mono", monospace;
-  font-optical-sizing: auto;
-    
+    font-optical-sizing: auto;
 }
 
-
-  
-  
 h1 {
     color: white;
 }
@@ -45,7 +41,6 @@ p {
     height: 32px;
     left: 400px;
     top: 304px;
-    
 }
 
 /*Foreground Items*/
@@ -61,8 +56,8 @@ p {
     width: 44px;
     height: 54px;
     /* background-color: #fb00ff; */
-    top: 296px;
-    left: 169px;
+    top: 4px;
+    left: 407px;
 }
 
 #key1 {
@@ -74,19 +69,12 @@ p {
     left: 416px;
 }
 
-#sign {
-    width: 64px;
-    height: 32px;
-    background-color: #442c1c;
-    top: 450px;
-    left: 10px;
-}
 
 #statue {
     width: 32px;
-    height: 64px;
-    top: 284px;
-    left: 704px;
+    height: 32px;
+    top: 181px;
+    left: 653px;
 }
 
 /*Inventory box*/
@@ -175,7 +163,6 @@ p {
 .background {
     position: absolute;
     z-index: 0;
-    
 }
 
 .speech-bubble {
@@ -188,6 +175,3 @@ p {
     opacity: 0;
     transition: all 1s ease-in-out;
 }
-
-
-
