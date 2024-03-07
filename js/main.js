@@ -43,7 +43,7 @@ gameWindow.onclick = function (e) {
     console.log(e.target.id);
 
     function changeBackgroundImage(imagePath) {
-        const backgroundImage = document.getElementById("tilemap");
+        const backgroundImage = document.getElementById("backgroundImage");
         if (backgroundImage) {
             backgroundImage.src = imagePath;
         }
