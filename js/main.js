@@ -44,8 +44,15 @@ gameWindow.onclick = function (e) {
 
     function changeBackgroundImage(imagePath) {
         const backgroundImage = document.getElementById("backgroundImage");
+        const mainCharacter = document.getElementById("mainCharacter");
         if (backgroundImage) {
+            backgroundImage.style.opacity = 0;
             backgroundImage.src = imagePath;
+            setTimeout(function () {
+                backgroundImage.style.opacity = 1;
+            }, 1000);
+            
+            
         }
     }
     switch (e.target.id) {
@@ -90,29 +97,23 @@ gameWindow.onclick = function (e) {
                     }
                     break;
 
-        case "sign":
-
-            sign.style.opacity = 0.5;
-
-            break;
+        
 
         case "statue":
-            showMessage(mainCharacterSpeech, mcAudio, "Wow a skull i wonder who it was..");
+            showMessage(mainCharacterSpeech, mcAudio, "Wow another skull i wonder who it was..");
             setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
             setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I'm alive ya know!");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "WHAT?! how am i supposed to know, a skull usually means your dead.");
+            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "WHAT?! how am I supposed to know, a skull usually means your dead.");
             setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "What ever. if you want to escape check the chest in the other room..");
             setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
             break;
+            case "statue2":
+            showMessage(mainCharacterSpeech, mcAudio, "Damn how many people died here..");
+            
+            break;
 
-            case "bone":
-                showMessage(mainCharacterSpeech, mcAudio, "Wow a skull i wonder who it was..");
-                setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
-                setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I'm alive ya know!");
-                setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "WHAT?! how am i supposed to know, a skull usually means your dead.");
-                setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "What ever. if you want to escape check the chest in the other room..");
-                setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
-                break;
+
+          
         default:
             //explode
 
