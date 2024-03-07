@@ -40,8 +40,8 @@ p {
 #mainCharacter {
     width: 32px;
     height: 32px;
-    left: 400px;
-    top: 304px;
+    left: 314px;
+    top: 493px;
 }
 
 /*Foreground Items*/
@@ -51,6 +51,18 @@ p {
     opacity: 1;
     top: 88px;
     left: 37px;
+}
+#start {
+    width: 100px;
+    height: 100px;
+    top: 435px;
+    left: 274px;
+}
+#staircase1 {
+    width: 200px;
+    height: 160px;
+    top: 459px;
+    left: 419px;
 }
 #bone {
     width: 64px;
@@ -86,6 +98,7 @@ p {
     top: 181px;
     left: 653px;
 }
+
 
 #statue2 {
     width: 32px;

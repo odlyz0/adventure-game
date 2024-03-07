@@ -97,7 +97,10 @@ gameWindow.onclick = function (e) {
                     }
                     break;
 
-        
+                    case "start":
+                        showMessage(mainCharacterSpeech, mcAudio, "Where the hell am I?! i need to get out as fast as possible");
+                        
+                        break;
 
         case "statue":
             showMessage(mainCharacterSpeech, mcAudio, "Wow another skull i wonder who it was..");
@@ -111,6 +114,12 @@ gameWindow.onclick = function (e) {
             showMessage(mainCharacterSpeech, mcAudio, "Damn how many people died here..");
             
             break;
+            case "staircase1":
+                showMessage(mainCharacterSpeech, mcAudio, "I should probably try to find my way out not deeper..");
+                
+                break;
+            
+    
 
 
           
