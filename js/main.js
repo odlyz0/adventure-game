@@ -52,6 +52,16 @@ gameWindow.onclick = function (e) {
             }
 
             break;
+
+            case "bone":
+                sign.style.opacity = 1;
+                if (document.getElementById("bone") !== null) {
+                    console.log('Found bone!');
+                    document.getElementById("bone").remove();
+                    changeInventory('bone', 'add');
+                }
+    
+                break;
         case "door2":
             if (gameState.door2locked == true) {
                 // check if we have key

@@ -46,10 +46,18 @@ p {
 /*Foreground Items*/
 #door1 {
     width: 64px;
-    height: 64px;
+    height: 39px;
     opacity: 1;
-    top: 66px;
-    left: 480px;
+    top: 88px;
+    left: 37px;
+}
+#bone {
+    width: 64px;
+    height: 39px;
+    opacity: 1;
+
+    top: 174px;
+    left: 612px;
 }
 
 #door2 {
@@ -60,14 +68,6 @@ p {
     left: 407px;
 }
 
-#key1 {
-    width: 32px;
-    height: 32px;
-    background-color: #fffb00;
-    opacity: 1;
-    top: 166px;
-    left: 416px;
-}
 
 
 #statue {
@@ -85,9 +85,9 @@ p {
     top: 10px;
     width: 180px;
     height: 80px;
-    color: white;
-    background-color: #602d00;
-    border: white 1px solid;
+    color: rgb(117, 91, 32);
+    background-color: #e9dda1;
+    border: rgb(0, 0, 0) 3px solid;
     padding: 10px;
 }
 
@@ -104,9 +104,10 @@ p {
 
 #brownBar {
     position: absolute;
-    height: 32px;
+    height: 80px;
+    opacity: 0.6;
     width: 800px;
-    background-color: #442c1c;
+    background-color: #000000;
     bottom: 0px;
 }
 
