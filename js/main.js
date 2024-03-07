@@ -41,6 +41,13 @@ gameWindow.onclick = function (e) {
     }
 
     console.log(e.target.id);
+
+    function changeBackgroundImage(imagePath) {
+        const backgroundImage = document.getElementById("tilemap");
+        if (backgroundImage) {
+            backgroundImage.src = imagePath;
+        }
+    }
     switch (e.target.id) {
 
         case "door1":
@@ -62,24 +69,26 @@ gameWindow.onclick = function (e) {
                 }
     
                 break;
-        case "door2":
-            if (gameState.door2locked == true) {
-                // check if we have key
-                if (document.getElementById("inv-key") !== null) {
-                    //yes -> unlock door?
-                    gameState.door2locked = false;
-                    changeInventory('key', 'delete');
-                    console.log('Door unlocked!');
-
-                } else {
-                    //no -> alert 'door locked'
-                    alert("Door is locked!");
-                }
-            } else {
-                console.log('enter building');
-            }
-
-            break;
+                case "door2":
+                    if (gameState.door2locked == true) {
+                        // check if we have key
+                        if (document.getElementById("inv-key") !== null) {
+                            // yes -> unlock door?
+                            gameState.door2locked = false;
+                            changeInventory('key', 'delete');
+                            console.log('Door unlocked!');
+                            
+                            // Change the background image when the door unlocks
+                            changeBackgroundImage("assets/img/project2.png");
+                
+                        } else {
+                            // no -> alert 'door locked'
+                            alert("Door is locked!");
+                        }
+                    } else {
+                        console.log('enter building');
+                    }
+                    break;
 
         case "sign":
 
@@ -96,6 +105,14 @@ gameWindow.onclick = function (e) {
             setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
             break;
 
+            case "bone":
+                showMessage(mainCharacterSpeech, mcAudio, "Wow a skull i wonder who it was..");
+                setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
+                setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I'm alive ya know!");
+                setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "WHAT?! how am i supposed to know, a skull usually means your dead.");
+                setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "What ever. if you want to escape check the chest in the other room..");
+                setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
+                break;
         default:
             //explode
 

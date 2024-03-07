@@ -54,8 +54,6 @@ p {
 #bone {
     width: 64px;
     height: 39px;
-    opacity: 1;
-
     top: 174px;
     left: 612px;
 }
@@ -67,8 +65,19 @@ p {
     top: 4px;
     left: 407px;
 }
+#hallway1 {
+    width: 44px;
+    height: 54px;
+    top: 4px;
+    left: 407px;
+}
 
-
+#staircase {
+    width: 44px;
+    height: 54px;
+    top: 400px;
+    left: 407px;
+}
 
 #statue {
     width: 32px;
@@ -126,6 +135,7 @@ p {
 #counterAvatar {
     right: 0px;
     bottom: 0px;
+    
     width: 72px;
     height: 68px;
 }
