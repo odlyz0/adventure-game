@@ -7,6 +7,8 @@ const gameWindow = document.getElementById("gameWindow");
 gameState = {
     "door2locked": true,
     "door3locked": true,
+    "door4locked": true,
+
     "inventory": [
     ]
 }
@@ -107,11 +109,31 @@ gameWindow.onclick = function (e) {
                         if (document.getElementById("key2") !== null) {
                             console.log('Found key!');
                             document.getElementById("key2").remove();
-                            changeInventory('rustykey', 'add');
+                            changeInventory('rusty key', 'add');
                         }
                         break;
                         
-                        case "chest3":
+                        
+
+                    case "door3":
+                    if (gameState.door3locked == true) {
+                        // check if we have key
+                        if (document.getElementById("inv-rusty key") !== null) {
+                            // yes -> unlock door?
+                            gameState.door3locked = false;
+                            changeInventory('rusty key', 'delete');
+                            console.log('Door unlocked!');
+                            
+                        
+                        } else {
+                            // no -> alert 'door locked'
+                            alert("Door is locked!");
+                        }
+                    } else {
+                        console.log('enter building');
+                    }
+                    break;
+                    case "chest3":
                         sign.style.opacity = 1;
                         if (document.getElementById("key3") !== null) {
                             console.log('Found key!');
@@ -120,14 +142,13 @@ gameWindow.onclick = function (e) {
                         }
             
                         break;
-
-                    case "door3":
-                    if (gameState.door3locked == true) {
+                    case "door4":
+                    if (gameState.door4locked == true) {
                         // check if we have key
-                        if (document.getElementById("inv-rustykey") !== null) {
+                        if (document.getElementById("inv-Golden key") !== null) {
                             // yes -> unlock door?
-                            gameState.door3locked = false;
-                            changeInventory('rustykey', 'delete');
+                            gameState.door4locked = false;
+                            changeInventory('Golden key', 'delete');
                             console.log('Door unlocked!');
                             
                         
