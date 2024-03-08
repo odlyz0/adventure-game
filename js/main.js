@@ -6,9 +6,12 @@ const gameWindow = document.getElementById("gameWindow");
 //Game state
 gameState = {
     "door2locked": true,
+    "door3locked": true,
     "inventory": [
     ]
 }
+
+
 
 const sec = 1000;
 
@@ -28,6 +31,8 @@ const inventoryList = document.getElementById("inventoryList"); //ul
 
 //Foreground Items
 const door1 = document.getElementById("door1");
+
+
 const sign = document.getElementById("sign");
 
 
@@ -74,24 +79,8 @@ gameWindow.onclick = function (e) {
                     document.getElementById("bone").remove();
                     changeInventory('bone', 'add');
                 }
-                case "key2":
-                sign.style.opacity = 1;
-                if (document.getElementById("key2") !== null) {
-                    console.log('Found key!');
-                    document.getElementById("key2").remove();
-                    changeInventory('rusty key', 'add');
-                }
-    
                 break;
-                case "key3":
-                sign.style.opacity = 1;
-                if (document.getElementById("key3") !== null) {
-                    console.log('Found key!');
-                    document.getElementById("key3").remove();
-                    changeInventory('Golden key', 'add');
-                }
-    
-                break;
+               
                 case "door2":
                     if (gameState.door2locked == true) {
                         // check if we have key
@@ -101,9 +90,47 @@ gameWindow.onclick = function (e) {
                             changeInventory('key', 'delete');
                             console.log('Door unlocked!');
                             
-                            // Change the background image when the door unlocks
+                            // Changes the background when the door unlocks
                             changeBackgroundImage("assets/img/project2.png");
                                 
+                        } else {
+                            // no -> alert 'door locked'
+                            alert("Door is locked!");
+                        }
+                    } else {
+                        console.log('enter building');
+                    }
+                    break;
+
+                    case "chest2":
+                        sign.style.opacity = 1;
+                        if (document.getElementById("key2") !== null) {
+                            console.log('Found key!');
+                            document.getElementById("key2").remove();
+                            changeInventory('rustykey', 'add');
+                        }
+                        break;
+                        
+                        case "chest3":
+                        sign.style.opacity = 1;
+                        if (document.getElementById("key3") !== null) {
+                            console.log('Found key!');
+                            document.getElementById("key3").remove();
+                            changeInventory('Golden key', 'add');
+                        }
+            
+                        break;
+
+                    case "door3":
+                    if (gameState.door3locked == true) {
+                        // check if we have key
+                        if (document.getElementById("inv-rustykey") !== null) {
+                            // yes -> unlock door?
+                            gameState.door3locked = false;
+                            changeInventory('rustykey', 'delete');
+                            console.log('Door unlocked!');
+                            
+                        
                         } else {
                             // no -> alert 'door locked'
                             alert("Door is locked!");
@@ -131,7 +158,7 @@ gameWindow.onclick = function (e) {
             
             break;
             case "staircase1":
-                showMessage(mainCharacterSpeech, mcAudio, "I should probably try to find my way out not deeper..");
+                showMessage(mainCharacterSpeech, mcAudio, "I should probably try to find my way out not go deeper..");
                 
                 break;
             

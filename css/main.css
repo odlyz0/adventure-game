@@ -53,6 +53,7 @@ p {
     left: 37px;
 }
 
+
 #staircase1 {
     width: 200px;
     height: 160px;
@@ -72,14 +73,20 @@ p {
     top: 4px;
     left: 407px;
 }
-#key2 {
+#door3 {
+    width: 260px;
+    height: 160px;
+    top: 210px;
+    left: 540px;
+}
+#chest2 {
     width: 25px;
     height: 39px;
     top: 272px;
     left: 62px;
 
 }
-#key3 {
+#chest3 {
     width: 30px;
     height: 39px;
     top: 150px;
@@ -125,7 +132,7 @@ p {
     left: 10px;
     top: -50px;
     width: 180px;
-    height: 80px;
+    height: 95px;
     color: rgb(117, 91, 32);
     background-color: #e9dda1;
     border: rgb(0, 0, 0) 3px solid;
