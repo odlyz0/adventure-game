@@ -52,12 +52,7 @@ p {
     top: 88px;
     left: 37px;
 }
-#start {
-    width: 100px;
-    height: 100px;
-    top: 435px;
-    left: 274px;
-}
+
 #staircase1 {
     width: 200px;
     height: 160px;
@@ -74,10 +69,26 @@ p {
 #door2 {
     width: 44px;
     height: 54px;
-    /* background-color: #fb00ff; */
     top: 4px;
     left: 407px;
 }
+#key2 {
+    width: 25px;
+    height: 39px;
+    top: 272px;
+    left: 62px;
+
+}
+#key3 {
+    width: 30px;
+    height: 39px;
+    top: 150px;
+    left: 600px;
+
+}
+
+
+
 #hallway1 {
     width: 44px;
     height: 54px;
@@ -178,7 +189,12 @@ p {
     left: 0px;
 }
 
-
+#tilemap2 {
+    width: 800px;
+    height: 608px;
+    top: 0px;
+    left: 0px;
+}
 /*Classes*/
 .foreground {
     position: absolute;

@@ -74,6 +74,22 @@ gameWindow.onclick = function (e) {
                     document.getElementById("bone").remove();
                     changeInventory('bone', 'add');
                 }
+                case "key2":
+                sign.style.opacity = 1;
+                if (document.getElementById("key2") !== null) {
+                    console.log('Found key!');
+                    document.getElementById("key2").remove();
+                    changeInventory('rusty key', 'add');
+                }
+    
+                break;
+                case "key3":
+                sign.style.opacity = 1;
+                if (document.getElementById("key3") !== null) {
+                    console.log('Found key!');
+                    document.getElementById("key3").remove();
+                    changeInventory('Golden key', 'add');
+                }
     
                 break;
                 case "door2":
@@ -87,7 +103,7 @@ gameWindow.onclick = function (e) {
                             
                             // Change the background image when the door unlocks
                             changeBackgroundImage("assets/img/project2.png");
-                
+                                
                         } else {
                             // no -> alert 'door locked'
                             alert("Door is locked!");
