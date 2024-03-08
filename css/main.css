@@ -75,8 +75,8 @@ p {
 }
 #door3 {
     width: 260px;
-    height: 160px;
-    top: 210px;
+    height: 360px;
+    top: 0px;
     left: 540px;
 }
 #door4 {
@@ -119,8 +119,8 @@ p {
 #statue {
     width: 32px;
     height: 32px;
-    top: 181px;
-    left: 653px;
+    top: 266px;
+    left: 422px;
 }
 
 

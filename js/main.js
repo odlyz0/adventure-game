@@ -150,6 +150,7 @@ gameWindow.onclick = function (e) {
                             gameState.door4locked = false;
                             changeInventory('Golden key', 'delete');
                             console.log('Door unlocked!');
+                            changeBackgroundImage("assets/img/project3.png");
                             
                         
                         } else {
