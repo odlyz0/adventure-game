@@ -202,12 +202,7 @@ p {
     left: 0px;
 }
 
-#tilemap2 {
-    width: 800px;
-    height: 608px;
-    top: 0px;
-    left: 0px;
-}
+
 /*Classes*/
 .foreground {
     position: absolute;

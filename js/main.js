@@ -123,7 +123,7 @@ gameWindow.onclick = function (e) {
                             gameState.door3locked = false;
                             changeInventory('rusty key', 'delete');
                             console.log('Door unlocked!');
-                            
+                           
                         
                         } else {
                             // no -> alert 'door locked'
@@ -151,6 +151,8 @@ gameWindow.onclick = function (e) {
                             changeInventory('Golden key', 'delete');
                             console.log('Door unlocked!');
                             changeBackgroundImage("assets/img/project3.png");
+                            
+                            alert("Congratulations! You escaped!");
                             
                         
                         } else {
